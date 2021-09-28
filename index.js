@@ -154,11 +154,11 @@ var clickHandler = (e) => {
         var list = checkPalindromeForAllDateFormats(date);
         console.log(list);
         if (list) {
-            resultDiv.innerText = "your birthday is palindrome";
+            resultDiv.innerText = "Your birthday is palindrome.😊";
         }
         else {
             var [ctr, nextDate] = getNextPalindromeDate(date);
-            resultDiv.innerText = `the next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}.You missed it by ${ctr} Days`
+            resultDiv.innerText = `The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}. You missed it by ${ctr} Days`
         }
 
     }
