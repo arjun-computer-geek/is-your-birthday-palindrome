@@ -1,3 +1,4 @@
+// reversing string
 var reverseStr = (str) => {
     var charList = str.split('');
     var reverseChar = charList.reverse();
@@ -5,12 +6,14 @@ var reverseStr = (str) => {
     return reversedStr;
 }
 
+// checking palindorme
 var checkPalindrome = (str) => {
     var reverse = reverseStr(str);
 
     return str === reverse;
 }
 
+// converting date to stirng and append the zero before it
 var convertDateToStr = (date) => {
     var dateStr = { day: "", month: "", year: "" };
     if (date.day < 10) {
@@ -27,6 +30,7 @@ var convertDateToStr = (date) => {
     return dateStr;
 }
 
+// we are making pridicting the all date formate and returning.
 var getAllDateFormats = (date) => {
     var dateStr = convertDateToStr(date);
 
@@ -40,6 +44,7 @@ var getAllDateFormats = (date) => {
     return [ddmmyyyy, mmddyyyy, yyyymmdd, ddmmyyy, mmddyy, yymmdd];
 }
 
+// checking palindrome for all date formate
 var checkPalindromeForAllDateFormats = (date) => {
     var listOfPalindromes = getAllDateFormats(date);
 
@@ -53,6 +58,7 @@ var checkPalindromeForAllDateFormats = (date) => {
     return flag;
 }
 
+// function for the checking leap year
 var isLeapYear = (year) => {
     if (year % 400 === 0) {
         return true;
@@ -66,6 +72,7 @@ var isLeapYear = (year) => {
     return false;
 }
 
+// handling the feberuary with leap year and get next date
 var getNextDate = (date) => {
     var day = date.day + 1;
     var month = date.month;
@@ -104,6 +111,7 @@ var getNextDate = (date) => {
     };
 }
 
+// function for the get next palindrome date
 var getNextPalindromeDate = (date) => {
     var ctr = 0;
     var nextDate = getNextDate(date);
@@ -119,11 +127,12 @@ var getNextPalindromeDate = (date) => {
     return [ctr, nextDate];
 }
 
-
+// element's reference variables
 var showBtn = document.querySelector('#show');
 var dobInput = document.querySelector('#dob');
 var resultDiv = document.querySelector("#output");
 
+// click handler function
 var clickHandler = (e) => {
     var bdayString = dobInput.value;
 
@@ -155,4 +164,5 @@ var clickHandler = (e) => {
     }
 }
 
+// adding eventlistener for the activate the show button
 showBtn.addEventListener('click', clickHandler);
