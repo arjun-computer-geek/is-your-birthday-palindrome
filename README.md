@@ -8,4 +8,4 @@ Palindrome Birthday App
 -  show the nearest palindrome date and by how many days the user has missed the palindrome date.
 ## Result :
 Here I have used VanilaJs, HTML, and CSS.
-Go To [App](https://arjun-computer-geek.github.io/is-your-birthday-palindrome/)
+## Go To [App](https://arjun-computer-geek.github.io/is-your-birthday-palindrome/)
